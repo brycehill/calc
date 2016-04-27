@@ -1,33 +1,29 @@
-var ops = document.querySelector('.op')
-var nums = document.querySelector('.number')
 var container = document.querySelector('.button-container')
-var left
-var op
-var right
+var leftExp = (a) => a  // identity
 var total
 
-
-container.addEventListener('click', function(e) {
+container.addEventListener('click', (e) => {
     var isNumber = e.target.classList.contains('number');
+    var isOp = e.target.classList.contains('op');
     var val = e.target.textContent
 
-    if (isNumber) {
-        display(val)
-        if (left === undefined) {
-            left = parseInt(val, 10)
-        } else {
-            right = parseInt(val, 10)
-        }
-    } else {
-        op = val
+    if (isOp) {
+        leftExp = ops[val](total)
+        return
     }
-})
 
-document.querySelector('#equals').addEventListener('click', function(e) {
-    display(eval([left, op, right].join('')))
+    total = leftExp(parseInt(val, 10))
+    display(total)
 })
 
 function display(x) {
     var panel = document.querySelector('.panel')
     panel.textContent = x
+}
+
+var ops = {
+    '+': (a) => (b) => a + b,
+    '-': (a) => (b) => a - b,
+    '*': (a) => (b) => a * b,
+    '/': (a) => (b) => a / b
 }
