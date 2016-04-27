@@ -2,9 +2,6 @@ body {
   font-size: 30px;
   font-family: "Open Sans", Helvetica, "sans-serif";
 }
-.panel {
-  height: 100px;
-}
 
 .flex-column {
     display: flex;
@@ -15,11 +12,22 @@ body {
   display: flex;
 }
 
-.flex {
-  /*flex: auto;*/
+.flex-two {
+  flex: 2 50%;
+}
+
+.container {
+  width: 360px;
+  height: 480px;
+}
+
+.button-container {
+  flex: auto;
+  height: 380px;
 }
 
 .panel {
+    height: 100px;
     background-color: rgb(31, 31, 35);
     font-size: 100px;
     color: white;
@@ -33,10 +41,12 @@ body {
     background-color: rgb(217,217,217);
     color: black;
 }
+
 .op {
     background-color: rgb(242,127,39);
     color: white;
 }
+
 button {
     flex: 25%;
     font-size: 45px;
@@ -55,18 +65,4 @@ button:hover {
 button:active,
 button:focus {
     outline: none;
-}
-
-.flex-two {
-  flex: 2 50%;
-}
-
-.container {
-  width: 360px;
-  height: 480px;
-}
-
-.button-container {
-  flex: auto;
-  height: 380px;
 }
