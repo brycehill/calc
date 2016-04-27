@@ -1,0 +1,72 @@
+body {
+  font-size: 30px;
+  font-family: "Open Sans", Helvetica, "sans-serif";
+}
+.panel {
+  height: 100px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex {
+  /*flex: auto;*/
+}
+
+.panel {
+    background-color: rgb(31, 31, 35);
+    font-size: 100px;
+    color: white;
+    font-weight: lighter;
+    text-align: right;
+    padding-right: 15px;
+    line-height: 100px;
+}
+
+.number {
+    background-color: rgb(217,217,217);
+    color: black;
+}
+.op {
+    background-color: rgb(242,127,39);
+    color: white;
+}
+button {
+    flex: 25%;
+    font-size: 45px;
+    height: 25%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-weight: lighter;
+    line-height: 1;
+}
+
+button:hover {
+    background-color: rgb(205,205,205);
+}
+
+button:active,
+button:focus {
+    outline: none;
+}
+
+.flex-two {
+  flex: 2 50%;
+}
+
+.container {
+  width: 360px;
+  height: 480px;
+}
+
+.button-container {
+  flex: auto;
+  height: 380px;
+}
